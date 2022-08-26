@@ -229,9 +229,9 @@ OS: Windows 10 Home 64-bit
 
 ## Screenshots
 
-![Result image](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld100.jpg)
-![Result image](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld200.jpg)
-![Result image](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld250.jpg)
+![Result image 100w](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld100.jpg)
+![Result image 200w](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld200.jpg)
+![Result image 250w](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld250.jpg)
 
 ---
 
