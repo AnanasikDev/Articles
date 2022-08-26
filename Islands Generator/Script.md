@@ -153,7 +153,7 @@ This is a very basic function that instantiates a gameobject and applies the inp
 
 <br>
 
-<details open>
+<details>
 <summary> Applying island size threshold </summary>
 
 <br>
@@ -167,12 +167,24 @@ if (tiles.Count <= threscholdIslandSize) return;
 
 </details>
 
-<details open>
+<details>
 <summary> Creating light outline for islands </summary>
 
 <br>
 
 One can use perlin noise to detect whether the certain position on the map is shallow water (is between two border height values) and make these spots lighter to achieve realistic water appearance.
+
+<br>
+
+</details>
+
+<details>
+<summary> Procedural generation </summary>
+
+<br>
+
+This algorithm supports procedural world generation extension.
+Set up generating islands in a certain chunk but instead of cutting off excess parts that are out of world's border let them spawn entirely for better visual and preventing algorithm from glitches of generating same islands for several times unnecessary.
 
 <br>
 
@@ -188,27 +200,20 @@ One can use perlin noise to detect whether the certain position on the map is sh
 
 <br>
 
-I ran my generator with different settings on my laptop and put results in the table:
+I ran my generator with different settings on my laptop and put average results in the table:
 
-|   №   | world width | world area | time(s) | GCa (MB) | time                                 |
-| :---: | :---------- | :--------- | :-----: | :------: | :----------------------------------- |
-|   1   | $1*10^2$    | $1.0*10^4$ |  1.285  |   46.9   | █                                    |
-|   2   | $1*10^2$    | $1.0*10^4$ |  1.285  |   46.9   | █                                    |
-|   3   | $2*10^2$    | $4.0*10^4$ |  2.230  |  238.6   | ██                                   |
-|   4   | $2*10^2$    | $4.0*10^4$ |  2.144  |  238.6   | ██                                   |
-|   5   | $3*10^2$    | $9.0*10^4$ |  4.498  |  522.2   | █████                                |
-|   6   | $3*10^2$    | $9.0*10^4$ |  4.562  |  522.2   | █████                                |
-|   7   | $4*10^2$    | $1.6*10^5$ |  9.645  |  983.0   | ████████████                         |
-|   8   | $4*10^2$    | $1.6*10^5$ |  9.261  |  983.0   | ████████████                         |
-|   9   | $5*10^2$    | $2.5*10^5$ | 14.191  |  1495.0  | ██████████████████                   |
-|  10   | $5*10^2$    | $2.5*10^5$ | 13.879  |  1495.0  | ██████████████████                   |
-|  10   | $6*10^2$    | $3.6*10^5$ | 21.086  |  2222.0  | ███████████████████████████          |
-|  10   | $6*10^2$    | $3.6*10^5$ | 20.746  |  2222.0  | ██████████████████████████           |
-|  10   | $7*10^2$    | $4.9*10^5$ | 28.230  |  3000.3  | ████████████████████████████████████ |
-|  10   | $7*10^2$    | $4.9*10^5$ | 28.387  |  3000.3  | ████████████████████████████████████ |
-|  11   | $1*10^3$    | $1.0*10^6$ | 56.295  |  2160.6  |                                      |
-|  12   | $1*10^3$    | $1.0*10^6$ | 55.526  |  2160.6  |                                      |
+|   №   | world width | world area | time(s) | GCa (MB) |
+| :---: | :---------- | :--------- | :-----: | :------: |
+|   1   | $1*10^2$    | $1.0*10^4$ |  1.285  |   46.9   |
+|   2   | $2*10^2$    | $4.0*10^4$ |  2.187  |  238.6   |
+|   3   | $3*10^2$    | $9.0*10^4$ |  4.530  |  522.2   |
+|   4   | $4*10^2$    | $1.6*10^5$ |  9.453  |  983.0   |
+|   5   | $5*10^2$    | $2.5*10^5$ | 14.035  |  1495.0  |
+|   6   | $6*10^2$    | $3.6*10^5$ | 20.916  |  2222.0  |
+|   7   | $7*10^2$    | $4.9*10^5$ | 28.309  |  3000.3  |
+|   8   | $1*10^3$    | $1.0*10^6$ | 55.911  |  2160.6  |
 
+<br>
 
 Each test was repeated twice for better accuracy. With the ```noise scale``` parameter equals to ```0.04``` and ```noise threshold``` to ```0.65``` ground density is ```13.667%```.
 
@@ -226,6 +231,15 @@ OS: Windows 10 Home 64-bit
 
 ![Result image](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld100.jpg)
 ![Result image](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld200.jpg)
+![Result image](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld250.jpg)
+
+---
+
+## Conclusion
+
+Personally I really love how this idea turned out. The speed and efficiency of this algorithm blowed up my mind.
+
+As it is my first actual article I am looking forward to listen for criticism. Be free to comment!:D
 
 ---
 
@@ -236,6 +250,7 @@ OS: Windows 10 Home 64-bit
 <br>
 
 https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/perlin-noise-part-2/perlin-noise-terrain-mesh
+https://github.com/AnanasikDev/Articles/tree/main/Islands%20Generator
 
 <br>
 
