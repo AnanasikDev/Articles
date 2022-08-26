@@ -233,6 +233,14 @@ OS: Windows 10 Home 64-bit
 ![Result image 200w](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld200.jpg)
 ![Result image 250w](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld250.jpg)
 
+Experiments with other settings:
+
+noise scale = 0.0375; noise threshold = 0.575
+![Result image 400w](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld400.jpg)
+
+noise scale = 0.0415; noise threshold = 0.675
+![Result image 400w](https://raw.githubusercontent.com/AnanasikDev/Articles/main/Islands%20Generator/ImgIslandsWorld400_2.jpg)
+
 ---
 
 ## Conclusion
